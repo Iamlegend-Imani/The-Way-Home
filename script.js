@@ -32,5 +32,24 @@ if ('IntersectionObserver' in window) {
   revealItems.forEach((item) => item.classList.add('visible'));
 }
 
+const liveResources = {
+  'Thought-Address Log': 'downloads/thought-address-log.html',
+  'Inside-Outside Ledger': 'downloads/inside-outside-ledger.html',
+  'The Eight Gates': 'downloads/eight-gates-map.html'
+};
+
+document.querySelectorAll('.resource-card').forEach((card) => {
+  const heading = card.querySelector('h3');
+  const status = card.querySelector('.status-pill');
+  if (!heading || !status || !liveResources[heading.textContent.trim()]) return;
+
+  const link = document.createElement('a');
+  link.className = 'status-pill';
+  link.href = liveResources[heading.textContent.trim()];
+  link.textContent = 'Open printable';
+  link.style.textDecoration = 'none';
+  status.replaceWith(link);
+});
+
 const year = document.getElementById('year');
 if (year) year.textContent = new Date().getFullYear();
