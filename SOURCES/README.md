@@ -42,11 +42,16 @@ For each major topic, document:
 
 ## Recovered orientation material
 
-- Reading a Birth Chart: planet = what, sign = how, house = where, aspects = interaction
+- **Astrology 101: Learning the Language of Your Soul**: the birth chart as one living system rather than isolated placements
+- Four-part grammar: planet = who/what is speaking, sign = how it speaks, house = where it speaks, aspect = how the voices interact
+- The movie analogy: planet = actor, sign = costume, house = set, aspect = relationship between actors
+- Whole-chart synthesis through repeated patterns, chart ruler, elements, modalities, dignity, and context
+- Core astrology principle: every planet has a voice; every sign changes how that voice speaks; every house changes where it speaks; every aspect reveals how the voices interact
 - Eight Gates as instructional architecture and infinity as an Exploration layer
 
 ## Source material currently under research
 
+- tropical, sidereal, and other zodiac frameworks and how The Way Home should distinguish them before teaching synthesis across systems
 - Atum, Shu, Tefnut, Geb, Nut, element assignments, and the supplied creation architecture
 - “Make love to deities” / planetary seduction as ritual language
 - planetary orbital cycles, graduation language, and higher-octave timing claims
@@ -57,6 +62,7 @@ For each major topic, document:
 
 - tropical, sidereal, and other zodiac systems
 - astrology history and traditions
+- chart rulers, planetary dignity, combustion, retrogrades, aspects, angles, elements, and modalities across traditions
 - numerology traditions
 - Human Design origins
 - astrocartography origins and method
