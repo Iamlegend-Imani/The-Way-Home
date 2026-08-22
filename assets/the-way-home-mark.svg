@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" role="img" aria-labelledby="title desc">
+  <title id="title">The Way Home mark</title>
+  <desc id="desc">A circular gold emblem with an archway, winding path, home and guiding star.</desc>
+  <rect width="320" height="320" rx="160" fill="#081426"/>
+  <circle cx="160" cy="160" r="146" fill="none" stroke="#d7b16a" stroke-width="3"/>
+  <circle cx="160" cy="160" r="136" fill="none" stroke="#d7b16a" stroke-width="1" opacity=".55"/>
+  <path d="M88 214V142c0-41 32-74 72-74s72 33 72 74v72" fill="none" stroke="#e7c783" stroke-width="5" stroke-linecap="round"/>
+  <path d="M101 214V144c0-34 26-61 59-61s59 27 59 61v70" fill="none" stroke="#d7b16a" stroke-width="2" opacity=".7"/>
+  <circle cx="160" cy="145" r="44" fill="#f2dfb5" opacity=".94"/>
+  <path d="M133 166l27-25 27 25v34h-54z" fill="#081426"/>
+  <path d="M153 200v-19c0-7 4-11 7-11s7 4 7 11v19" fill="#e7c783"/>
+  <path d="M160 203c-34 14-50 24-47 37 4 17 50 9 47 29-2 12-24 19-45 24" fill="none" stroke="#f0d79f" stroke-width="8" stroke-linecap="round"/>
+  <path d="M160 34l5 15 15 5-15 5-5 15-5-15-15-5 15-5z" fill="#e7c783"/>
+  <path d="M160 21v10M160 77v10M127 54h10M183 54h10" stroke="#d7b16a" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="82" cy="111" r="4" fill="#d7b16a"/>
+  <circle cx="238" cy="111" r="4" fill="#d7b16a"/>
+  <path d="M67 184c-15-19-20-40-13-63M253 184c15-19 20-40 13-63" fill="none" stroke="#d7b16a" stroke-width="2" opacity=".7"/>
+  <path d="M61 151l-15-8M64 164l-16 2M259 151l15-8M256 164l16 2" stroke="#d7b16a" stroke-width="2" stroke-linecap="round"/>
+</svg>
