@@ -1,52 +1,40 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#081426" />
   <title>The Eight Gates | The Way Home</title>
-  <link rel="stylesheet" href="printables.css" />
+  <link rel="icon" href="../assets/the-way-home-mark.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    .map-page{width:min(calc(100% - 28px),1050px);margin:auto;padding:60px 0 100px}.map-head{max-width:780px;margin-bottom:42px}.map-head h1{margin:10px 0 16px;font:400 clamp(3.8rem,9vw,7rem)/.9 var(--serif);letter-spacing:-.05em}.map-head p{color:var(--muted)}.map-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.map-gate{position:relative;min-height:245px;padding:22px;border:1px solid var(--line);border-radius:110px 110px 22px 22px;background:radial-gradient(circle at 50% 20%,color-mix(in srgb,var(--blue) 22%,transparent),transparent 36%),var(--panel);display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden}.map-gate:before{content:"";position:absolute;inset:13px;border:1px solid var(--line);border-radius:96px 96px 15px 15px;pointer-events:none}.map-gate span{position:absolute;top:34px;left:50%;transform:translateX(-50%);font:400 3.5rem var(--serif);color:var(--accent-bright)}.map-gate h2{position:relative;margin:0 0 5px;font:400 1.45rem var(--serif)}.map-gate p{position:relative;margin:0;color:var(--muted);font-size:.82rem}.map-line{margin:36px 0 0;padding:20px;border:1px solid var(--line);border-radius:22px;text-align:center;font:400 1.2rem/1.6 var(--serif);color:var(--accent-bright);background:var(--panel)}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}.print-button{border:0;cursor:pointer}@media(max-width:820px){.map-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:480px){.map-grid{grid-template-columns:1fr}.map-gate{min-height:220px}}@media print{.site-header,.actions,.site-footer{display:none!important}.map-page{padding:0;width:100%}.map-grid{grid-template-columns:repeat(4,1fr);gap:8px}.map-gate{min-height:190px}.map-line{font-size:1rem}}
+  </style>
 </head>
 <body>
-  <div class="toolbar">
-    <a href="../#library">← Back to The Way Home</a>
-    <button type="button" onclick="window.print()">Print / Save as PDF</button>
-  </div>
+  <header class="site-header">
+    <a class="brand" href="../" aria-label="The Way Home"><img src="../assets/the-way-home-mark.svg" alt="" /><span>The Way Home</span></a>
+    <div class="header-actions"><button class="theme-toggle" type="button" aria-label="Change atmosphere"><span class="theme-icon">◐</span><span class="theme-label">Atmosphere</span></button></div>
+    <nav class="site-nav" style="display:flex"><a href="../LIBRARY/">Library</a><a href="../#journey">The Way</a></nav>
+  </header>
 
-  <main class="sheet">
-    <header class="sheet-header">
-      <img src="../assets/the-way-home-mark.svg" alt="The Way Home emblem" />
-      <div>
-        <p class="eyebrow">The Way Home · Map</p>
-        <h1>The Eight Gates</h1>
-        <p class="subtitle">A Human Operating System for Conscious Living.</p>
-      </div>
-    </header>
-
-    <p class="intro">The Way Home is sequenced so that observation and self-knowledge come before increasingly symbolic and metaphysical interpretation. Move through the Gates in order if you are new to the material.</p>
-
-    <div class="path">GROUND → KNOW → DECODE → NAVIGATE → CREATE → REMEMBER → EXPAND → RETURN</div>
-
-    <section class="gates">
-      <article class="gate"><small>01 · Ground</small><h2>Meet yourself first.</h2><p>What is happening inside me?</p></article>
-      <article class="gate"><small>02 · Know</small><h2>Study the inner landscape.</h2><p>Who am I beneath conditioning?</p></article>
-      <article class="gate"><small>03 · Decode</small><h2>Learn the maps.</h2><p>What maps help me understand myself?</p></article>
-      <article class="gate"><small>04 · Navigate</small><h2>Work with time and place.</h2><p>How do cycles, relationships, and place affect me?</p></article>
-      <article class="gate"><small>05 · Create</small><h2>Participate consciously.</h2><p>How do I consciously participate in my life?</p></article>
-      <article class="gate"><small>06 · Remember</small><h2>Study what came before.</h2><p>What came before me and what do I carry forward?</p></article>
-      <article class="gate"><small>07 · Expand</small><h2>Enter advanced inquiry.</h2><p>What might consciousness, spirit, and reality be?</p></article>
-      <article class="gate"><small>08 · Return</small><h2>Live what you learn.</h2><p>How do I live what I have learned?</p></article>
+  <main class="map-page">
+    <section class="map-head reveal"><p class="section-kicker">The Way Home · Orientation</p><h1>The Eight Gates</h1><p>The sequence is not a hierarchy of spiritual worth. It is a learning path: begin with direct experience, move through maps and cycles, then return to a life you can actually inhabit.</p></section>
+    <section class="map-grid">
+      <article class="map-gate reveal"><span>01</span><h2>Ground</h2><p>What is happening inside me?</p></article>
+      <article class="map-gate reveal"><span>02</span><h2>Know</h2><p>Who am I beneath conditioning?</p></article>
+      <article class="map-gate reveal"><span>03</span><h2>Decode</h2><p>What maps help me understand myself?</p></article>
+      <article class="map-gate reveal"><span>04</span><h2>Navigate</h2><p>How do time, place, cycles, and relationship affect me?</p></article>
+      <article class="map-gate reveal"><span>05</span><h2>Create</h2><p>How do I consciously participate in my life?</p></article>
+      <article class="map-gate reveal"><span>06</span><h2>Remember</h2><p>What came before me and what do I carry forward?</p></article>
+      <article class="map-gate reveal"><span>07</span><h2>Expand</h2><p>What might consciousness, spirit, and reality be?</p></article>
+      <article class="map-gate reveal"><span>08</span><h2>Return</h2><p>How do I live what I have learned?</p></article>
     </section>
-
-    <div class="prompt-box">
-      <strong>Method:</strong> EVIDENCE identifies established or well-sourced material. TRADITION identifies teachings with an identifiable lineage. EXPLORATION identifies synthesis, symbolic interpretation, hypothesis, or open inquiry.
-    </div>
-
-    <p class="quote">Observe before interpreting. Reflect before believing.</p>
-
-    <footer class="footer">
-      <span>The Way Home · Version 1</span>
-      <span>Free to use · Support: ko-fi.com/wayhomeproject</span>
-    </footer>
+    <div class="map-line reveal">Ground → Know → Decode → Navigate → Create → Remember → Expand → Return</div>
+    <div class="actions reveal"><button class="button button-primary print-button" onclick="window.print()">Print / Save as PDF</button><a class="button button-ghost" href="../#journey">Walk the interactive path</a></div>
   </main>
+
+  <footer class="site-footer section-shell"><div><p class="footer-brand">The Way Home</p><p>A Human Operating System for Conscious Living</p></div><div class="footer-links"><a href="../LIBRARY/">Library</a><a href="https://ko-fi.com/wayhomeproject" target="_blank" rel="noreferrer">Support</a></div><p class="copyright">© <span id="year"></span> The Way Home.</p></footer>
+  <script src="../script.js"></script>
 </body>
 </html>
