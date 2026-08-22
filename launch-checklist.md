@@ -1,0 +1,21 @@
+# The Way Home V1 Launch Checklist
+
+- [x] Repository foundation merged to `main`
+- [x] Public site built on `site-v1`
+- [x] Responsive mobile layout added
+- [x] The Eight Gates presented publicly
+- [x] Evidence / Tradition / Exploration method included
+- [x] Ko-fi support connected: https://ko-fi.com/wayhomeproject
+- [x] Support remains separate from access
+- [x] Thought-Address Log packaged
+- [x] Inside-Outside Ledger packaged
+- [x] 7–24–5 Weekly Review packaged
+- [x] Eight Gates Map packaged
+- [x] Print / Save as PDF flow added
+- [x] Library downloads page added
+- [x] GitHub Pages static-site files added
+- [ ] Merge `site-v1` to `main`
+- [ ] Enable GitHub Pages from `main` / root if not already enabled
+- [ ] Verify public URL on desktop and mobile
+- [ ] Prepare public-safe edition of The Intuitive System
+- [ ] Publish formal v1.0 release after verification
