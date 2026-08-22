@@ -14,15 +14,10 @@ This is Version One. There is much more to build.
 
 > **Take what you need. Support what you can. Help keep The Way Home open.**
 
-## Support model
+## Support The Way Home
 
-Support will remain separate from access.
+**Ko-fi:** https://ko-fi.com/wayhomeproject
 
-Planned options:
-- one-time contribution
-- recurring contribution
-- choose-your-own amount
+Support can be one-time or recurring. Access to the core body of work remains separate from payment.
 
 No knowledge tier is created by payment. A supporter is helping sustain the work, not purchasing a more spiritually privileged version of it.
-
-Payment links will be added only after the public learning experience and first downloads are ready.
