@@ -36,6 +36,7 @@ const siteRoot = getSiteRoot();
 const siteLink = (path = '') => `${siteRoot}${path}`;
 const globalNav = [
   ['Start Here', 'START-HERE/'],
+  ['HOME//MAP', 'home-map/'],
   ['The Map', 'downloads/eight-gates-map.html'],
   ['Library', 'LIBRARY/'],
   ['Thesis', 'THESIS/'],
@@ -46,6 +47,16 @@ const globalNav = [
 const nav = document.querySelector('.site-nav');
 if (nav) {
   nav.innerHTML = globalNav.map(([label, path]) => `<a href="${siteLink(path)}">${label}</a>`).join('');
+}
+
+const heroActions = document.querySelector('.hero-actions');
+if (heroActions && !heroActions.querySelector('[data-home-map-link]')) {
+  const homeMapLink = document.createElement('a');
+  homeMapLink.className = 'button button-ghost';
+  homeMapLink.href = siteLink('home-map/');
+  homeMapLink.dataset.homeMapLink = 'true';
+  homeMapLink.textContent = 'Open HOME//MAP';
+  heroActions.appendChild(homeMapLink);
 }
 
 const footerLinks = document.querySelector('.footer-links');
