@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#07111f" />
+  <meta name="description" content="HOME//MAP — a living map of self from The Way Home." />
+  <title>HOME//MAP — Your Living Map of Self</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="HOME MAP home">
+      <span class="brand-mark">⌂</span>
+      <span>HOME//MAP</span>
+      <small>by The Way Home</small>
+    </a>
+    <div class="top-actions">
+      <button class="quiet-btn" id="quickCheckinBtn" type="button">+ Check in</button>
+      <button class="icon-btn" id="themeBtn" type="button" aria-label="Toggle atmosphere">◐</button>
+    </div>
+  </header>
+
+  <nav class="nav" aria-label="Primary">
+    <button data-view="today" class="nav-item active">Today</button>
+    <button data-view="map" class="nav-item">My Map</button>
+    <button data-view="patterns" class="nav-item">Patterns</button>
+    <button data-view="journal" class="nav-item">Journal</button>
+    <button data-view="settings" class="nav-item">Settings</button>
+  </nav>
+
+  <main id="app" class="app-shell">
+    <section id="view-today" class="view active" aria-labelledby="todayTitle">
+      <div class="hero-grid">
+        <article class="hero-card">
+          <div class="eyebrow" id="todayDate">You are here</div>
+          <h1 id="todayTitle">Your inner weather</h1>
+          <p class="lede">Not a prediction. An orientation. Notice what is present, what is moving, and what your own life keeps teaching you.</p>
+
+          <div class="weather-grid">
+            <div class="weather-cell"><span>Planetary day</span><strong id="planetaryDay">—</strong></div>
+            <div class="weather-cell"><span>Lunar phase</span><strong id="moonPhase">—</strong></div>
+            <div class="weather-cell"><span>24-hour quadrant</span><strong id="dayQuadrant">—</strong></div>
+            <div class="weather-cell"><span>Current gate</span><strong id="currentGate">Ground</strong></div>
+          </div>
+
+          <div class="orientation-block">
+            <span class="eyebrow">Today’s orientation</span>
+            <h2 id="orientationTitle">Observe before interpreting.</h2>
+            <p id="orientationCopy">Begin with what is actually true in your body, attention and environment before assigning meaning.</p>
+          </div>
+
+          <button class="primary-btn" id="todayCheckinBtn" type="button">Locate myself</button>
+        </article>
+
+        <aside class="pulse-card">
+          <div class="pulse-ring" id="pulseRing">
+            <div><strong id="pulseScore">—</strong><span>capacity</span></div>
+          </div>
+          <div class="pulse-copy">
+            <span class="eyebrow">Last check-in</span>
+            <h3 id="lastState">No signal yet</h3>
+            <p id="lastStateCopy">Your map becomes more useful as you add observations over time.</p>
+          </div>
+        </aside>
+      </div>
+
+      <section class="section-block">
+        <div class="section-heading">
+          <div><span class="eyebrow">The living system</span><h2>Nothing is separate.</h2></div>
+          <button class="text-btn" data-jump="map">Enter the map →</button>
+        </div>
+        <div id="domainStrip" class="domain-strip"></div>
+      </section>
+
+      <section class="section-block split-block">
+        <article class="insight-card">
+          <span class="eyebrow">What your data can know</span>
+          <h2 id="patternPreviewTitle">We need a little history.</h2>
+          <p id="patternPreview">After several check-ins, HOME//MAP will surface correlations from your own observations rather than pretending a universal rule applies to you.</p>
+          <button class="text-btn" data-jump="patterns">Open patterns →</button>
+        </article>
+        <article class="question-card">
+          <span class="eyebrow">Return question</span>
+          <blockquote id="returnQuestion">What is true before you explain it?</blockquote>
+        </article>
+      </section>
+    </section>
+
+    <section id="view-map" class="view" aria-labelledby="mapTitle">
+      <div class="section-heading major-heading">
+        <div><span class="eyebrow">My constellation</span><h1 id="mapTitle">The Living Map of Self</h1><p>Your life as an interconnected system. Select any domain to record what is alive there now.</p></div>
+        <div class="map-legend"><span><i class="dot bright"></i> more resourced</span><span><i class="dot quiet"></i> asking attention</span></div>
+      </div>
+
+      <div class="map-layout">
+        <div class="constellation-wrap">
+          <svg id="constellation" viewBox="0 0 760 760" role="img" aria-label="Interactive constellation of life domains"></svg>
+        </div>
+        <aside class="domain-panel" id="domainPanel">
+          <span class="eyebrow">Selected domain</span>
+          <h2 id="domainPanelTitle">Self</h2>
+          <p id="domainPanelPrompt">The center that notices every other part.</p>
+          <label class="range-label">How resourced does this feel? <strong id="domainScoreLabel">5/10</strong></label>
+          <input id="domainScore" type="range" min="1" max="10" value="5" />
+          <label for="domainNote">What is alive here?</label>
+          <textarea id="domainNote" rows="6" placeholder="Observe before interpreting..."></textarea>
+          <button class="primary-btn" id="saveDomainBtn" type="button">Save to map</button>
+        </aside>
+      </div>
+
+      <section class="section-block gates-block">
+        <div class="section-heading"><div><span class="eyebrow">The Way Home</span><h2>Eight gates. One returning movement.</h2></div></div>
+        <div id="gatesGrid" class="gates-grid"></div>
+      </section>
+    </section>
+
+    <section id="view-patterns" class="view" aria-labelledby="patternsTitle">
+      <div class="section-heading major-heading">
+        <div><span class="eyebrow">Personal pattern graph</span><h1 id="patternsTitle">What does your life keep showing you?</h1><p>Correlations from your own check-ins. Observation first; interpretation second.</p></div>
+        <button class="secondary-btn" id="demoDataBtn" type="button">Load demo data</button>
+      </div>
+
+      <div class="metric-tabs" id="metricTabs">
+        <button class="metric-tab active" data-metric="energy">Energy</button>
+        <button class="metric-tab" data-metric="clarity">Clarity</button>
+        <button class="metric-tab" data-metric="capacity">Capacity</button>
+        <button class="metric-tab" data-metric="connection">Connection</button>
+      </div>
+
+      <article class="chart-card">
+        <div class="chart-head"><div><span class="eyebrow">Signal over time</span><h3 id="chartMetricTitle">Energy</h3></div><span id="chartCount">0 observations</span></div>
+        <div class="chart-wrap"><svg id="patternChart" viewBox="0 0 960 360" role="img" aria-label="Personal pattern chart"></svg></div>
+      </article>
+
+      <div class="pattern-grid" id="patternCards"></div>
+    </section>
+
+    <section id="view-journal" class="view" aria-labelledby="journalTitle">
+      <div class="section-heading major-heading">
+        <div><span class="eyebrow">Remember</span><h1 id="journalTitle">Your life is already leaving clues.</h1><p>Keep the memory. Find the pattern later.</p></div>
+        <button class="primary-btn" id="newJournalBtn" type="button">+ New entry</button>
+      </div>
+      <div class="journal-layout">
+        <aside class="journal-list" id="journalList"></aside>
+        <article class="journal-editor">
+          <input id="journalTitleInput" class="title-input" type="text" placeholder="Untitled observation" />
+          <div class="journal-meta"><span id="journalDate">New entry</span><select id="journalGate"></select></div>
+          <textarea id="journalBody" class="journal-body" placeholder="What happened? What did you feel? What changed? What do you want to remember?"></textarea>
+          <div class="editor-actions"><button class="danger-text" id="deleteJournalBtn" type="button">Delete</button><button class="primary-btn" id="saveJournalBtn" type="button">Save entry</button></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="view-settings" class="view" aria-labelledby="settingsTitle">
+      <div class="section-heading major-heading"><div><span class="eyebrow">Your sanctuary</span><h1 id="settingsTitle">Settings & privacy</h1><p>Your inner life is not inventory.</p></div></div>
+      <div class="settings-grid">
+        <article class="settings-card">
+          <span class="eyebrow">Profile</span>
+          <h3 id="profileName">Your map</h3>
+          <p id="profileMeta">Complete onboarding to locate yourself.</p>
+          <button class="secondary-btn" id="editProfileBtn" type="button">Edit profile</button>
+        </article>
+        <article class="settings-card">
+          <span class="eyebrow">Your data</span>
+          <h3>Local-first prototype</h3>
+          <p>In this GitHub Pages version, your profile, check-ins, map notes and journal stay in this browser using local storage. Nothing is sent to a HOME//MAP server.</p>
+          <div class="stack-actions"><button class="secondary-btn" id="exportBtn" type="button">Export my map</button><label class="secondary-btn file-btn">Import my map<input id="importInput" type="file" accept="application/json" /></label><button class="danger-btn" id="eraseBtn" type="button">Erase everything</button></div>
+        </article>
+        <article class="settings-card span-two">
+          <span class="eyebrow">Architecture</span>
+          <h3>Prototype now. Personal intelligence layer later.</h3>
+          <p>This build intentionally separates the experience from the future infrastructure. Authentication, encrypted cloud storage, subscription billing, astrology/transit services, wearable integrations and AI memory can be connected when HOME//MAP moves to its full Vercel architecture.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="onboardingDialog" class="modal">
+    <form method="dialog" id="onboardingForm" class="modal-card">
+      <button class="modal-close" value="cancel" type="submit" aria-label="Close">×</button>
+      <span class="eyebrow">Before we begin</span>
+      <h2>We need to locate you.</h2>
+      <p>This information stays in your browser in this prototype.</p>
+      <div class="form-grid">
+        <label>What should the map call you?<input id="profileFirstName" required autocomplete="given-name" /></label>
+        <label>Email <small>(optional for this prototype)</small><input id="profileEmail" type="email" autocomplete="email" /></label>
+        <label>When did you arrive?<input id="profileBirthDate" type="date" /></label>
+        <label>Birth time<input id="profileBirthTime" type="time" /></label>
+        <label class="span-two">Where did you arrive?<input id="profileBirthPlace" placeholder="City, country" /></label>
+        <label>What is asking for attention?<select id="profileAttention"></select></label>
+        <label>Where are you in The Way Home?<select id="profileGate"></select></label>
+        <label class="span-two">What are you returning to?<textarea id="profileReturning" rows="3" placeholder="Your own words..."></textarea></label>
+      </div>
+      <button class="primary-btn full-btn" value="default" type="submit">Assemble my map</button>
+    </form>
+  </dialog>
+
+  <dialog id="checkinDialog" class="modal">
+    <form method="dialog" id="checkinForm" class="modal-card compact-card">
+      <button class="modal-close" value="cancel" type="submit" aria-label="Close">×</button>
+      <span class="eyebrow">Locate yourself</span>
+      <h2>What is true right now?</h2>
+      <div class="checkin-sliders" id="checkinSliders"></div>
+      <label>Dominant domain<select id="checkinDomain"></select></label>
+      <label>Current gate<select id="checkinGate"></select></label>
+      <label>One observation<textarea id="checkinNote" rows="3" placeholder="No story required. Just notice."></textarea></label>
+      <button class="primary-btn full-btn" value="default" type="submit">Add to my map</button>
+    </form>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
