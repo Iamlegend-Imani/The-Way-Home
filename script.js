@@ -24,8 +24,36 @@ if (themeButton) {
   });
 }
 
-const menuButton = document.querySelector('.menu-toggle');
+function getSiteRoot() {
+  const path = window.location.pathname;
+  const projectMarker = '/The-Way-Home/';
+  const projectIndex = path.indexOf(projectMarker);
+  if (projectIndex !== -1) return path.slice(0, projectIndex + projectMarker.length);
+  return '/';
+}
+
+const siteRoot = getSiteRoot();
+const siteLink = (path = '') => `${siteRoot}${path}`;
+const globalNav = [
+  ['Start Here', 'START-HERE/'],
+  ['The Map', 'downloads/eight-gates-map.html'],
+  ['Library', 'LIBRARY/'],
+  ['Thesis', 'THESIS/'],
+  ['Field Notes', 'FIELD-NOTES/'],
+  ['Support', 'SUPPORT/']
+];
+
 const nav = document.querySelector('.site-nav');
+if (nav) {
+  nav.innerHTML = globalNav.map(([label, path]) => `<a href="${siteLink(path)}">${label}</a>`).join('');
+}
+
+const footerLinks = document.querySelector('.footer-links');
+if (footerLinks) {
+  footerLinks.innerHTML = globalNav.map(([label, path]) => `<a href="${siteLink(path)}">${label}</a>`).join('');
+}
+
+const menuButton = document.querySelector('.menu-toggle');
 if (menuButton && nav) {
   menuButton.addEventListener('click', () => {
     const open = nav.classList.toggle('open');
