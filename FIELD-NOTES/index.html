@@ -1,44 +1,40 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#06111f" />
+  <meta name="description" content="Field Notes from The Way Home, where unfinished thinking is allowed to remain unfinished." />
   <title>Field Notes | The Way Home</title>
+  <link rel="icon" href="../assets/the-way-home-mark.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="../styles.css" />
   <style>
-    :root{--bg:#081426;--cream:#f2e7d0;--muted:#aeb8c6;--gold:#d7b16a;--line:rgba(231,199,131,.22)}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 50% 0,rgba(64,99,143,.22),transparent 35%),var(--bg);color:var(--cream);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;line-height:1.7}.shell{width:min(calc(100% - 32px),820px);margin:auto;padding:34px 0 100px}a{color:var(--gold);text-decoration:none}.hero{padding:70px 0 35px}.hero img{width:76px}.eyebrow{text-transform:uppercase;letter-spacing:.18em;color:var(--gold);font-size:.7rem;font-weight:800;margin-top:24px}h1,h2{font-family:Georgia,'Times New Roman',serif;font-weight:400}h1{font-size:clamp(3.2rem,9vw,6rem);line-height:.95;margin:10px 0 22px}h2{font-size:2rem;margin-top:48px}p,li{color:var(--muted)}.note-template{margin-top:30px;padding:26px;border:1px solid var(--line);border-radius:22px;background:rgba(255,255,255,.025)}.note-template strong{color:var(--cream)}blockquote{margin:45px 0 0;padding:24px;border-left:2px solid var(--gold);font-family:Georgia,'Times New Roman',serif;font-size:1.35rem;color:var(--cream)}
+    .notes-page{width:min(calc(100% - 28px),940px);margin:auto;padding:70px 0 120px}.notes-hero{padding:30px 0 58px}.notes-hero h1{margin:10px 0 18px;font:400 clamp(4rem,9vw,7.5rem)/.87 var(--serif);letter-spacing:-.055em}.notes-hero p{max-width:760px;color:var(--muted);font-size:1.05rem}.notes-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 0 52px}.note-card{padding:25px;border:1px solid var(--line);border-radius:24px;background:var(--panel)}.note-card h2{margin:0 0 9px;font:400 1.6rem var(--serif)}.note-card p{color:var(--muted);margin:0}.method-note{padding:32px;border:1px solid var(--line);border-radius:28px;background:radial-gradient(circle at 92% 0,var(--accent-soft),transparent 34%),var(--panel)}.method-note h2{margin:0 0 16px;font:400 2.25rem var(--serif)}.template{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}.template div{padding:14px;border-top:1px solid var(--line);color:var(--muted)}.template strong{display:block;color:var(--text);margin-bottom:4px}.quote{margin:55px 0 0;padding:30px;border-left:3px solid var(--accent);font:400 clamp(1.5rem,3vw,2.2rem)/1.35 var(--serif);color:var(--text)}@media(max-width:680px){.notes-grid,.template{grid-template-columns:1fr}.notes-page{padding-top:42px}}
   </style>
 </head>
 <body>
-  <main class="shell">
-    <a href="../">← The Way Home</a>
-    <section class="hero">
-      <img src="../assets/the-way-home-mark.svg" alt="The Way Home emblem" />
-      <p class="eyebrow">Field Notes</p>
-      <h1>The work is allowed to evolve.</h1>
-      <p>Field Notes are where unfinished thinking can remain unfinished. They hold questions, personal observations, changing interpretations, contradictions, experiments, and ideas that are not yet ready to become curriculum.</p>
+  <header class="site-header">
+    <a class="brand" href="../" aria-label="The Way Home"><img src="../assets/the-way-home-mark.svg" alt="" /><span>The Way Home</span></a>
+    <nav id="site-nav" class="site-nav"><a href="../#way">The Way</a><a href="../LIBRARY/">Library</a><a href="../THESIS/">Thesis</a><a href="../SUPPORT/">Support</a></nav>
+    <div class="header-actions"><button class="theme-toggle" type="button" aria-label="Change atmosphere"><span class="theme-icon">◐</span><span class="theme-label">Atmosphere</span></button><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span><span class="sr-only">Open navigation</span></button></div>
+  </header>
+
+  <main class="notes-page">
+    <section class="notes-hero reveal"><p class="section-kicker">Field Notes</p><h1>The work is allowed to evolve.</h1><p>Field Notes are where unfinished thinking can remain unfinished. They hold questions, contradictions, observations, practices under review, changing interpretations, and ideas that are not yet ready to become curriculum.</p></section>
+
+    <section class="notes-grid">
+      <article class="note-card reveal"><h2>Questions are allowed.</h2><p>A question does not need to become a claim in order to deserve sustained attention.</p></article>
+      <article class="note-card reveal"><h2>Contradictions stay visible.</h2><p>If a source conflicts with itself, the conflict is documented instead of silently repaired.</p></article>
+      <article class="note-card reveal"><h2>Corrections are part of the record.</h2><p>Stronger sourcing or changed understanding should improve the work without pretending the earlier version never existed.</p></article>
+      <article class="note-card reveal"><h2>Experience is not proof.</h2><p>Personal meaning can be honored while remaining distinct from scientific, historical, or universal claims.</p></article>
     </section>
 
-    <h2>What belongs here</h2>
-    <ul>
-      <li>open questions</li>
-      <li>personal observations</li>
-      <li>evolving interpretations</li>
-      <li>contradictions and changed beliefs</li>
-      <li>practices under review</li>
-      <li>ideas that need stronger sourcing</li>
-    </ul>
+    <section class="method-note reveal"><p class="section-kicker">The Field Note method</p><h2>A record of inquiry, not certainty.</h2><div class="template"><div><strong>Date</strong>When was this observation made?</div><div><strong>Question</strong>What am I actually asking?</div><div><strong>Observation</strong>What happened before interpretation?</div><div><strong>Current interpretation</strong>What might it mean right now?</div><div><strong>Knowledge lens</strong>Evidence, Tradition, or Exploration?</div><div><strong>What would change my mind?</strong>What evidence or experience would challenge this view?</div><div><strong>Next inquiry</strong>What needs to be researched, observed, or lived next?</div><div><strong>Status</strong>Open, strengthened, revised, or retired?</div></div></section>
 
-    <section class="note-template">
-      <p><strong>Date</strong></p>
-      <p><strong>Question</strong></p>
-      <p><strong>Observation</strong></p>
-      <p><strong>Current interpretation</strong></p>
-      <p><strong>Knowledge lens</strong>: Evidence / Tradition / Exploration</p>
-      <p><strong>What would change my mind</strong></p>
-      <p><strong>Next inquiry</strong></p>
-    </section>
-
-    <blockquote>A meaningful idea does not become settled truth simply because it is meaningful.</blockquote>
+    <div class="quote reveal">A meaningful idea does not become settled truth simply because it is meaningful.</div>
   </main>
+
+  <footer class="site-footer section-shell"><div><p class="footer-brand">The Way Home</p><p>A Human Operating System for Conscious Living</p></div><div class="footer-links"><a href="../LIBRARY/">Library</a><a href="../THESIS/">Thesis</a><a href="../SUPPORT/">Support</a></div><p class="copyright">© <span id="year"></span> The Way Home.</p></footer>
+  <script src="../script.js"></script>
 </body>
 </html>
