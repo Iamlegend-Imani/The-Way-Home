@@ -36,7 +36,6 @@ const siteRoot = getSiteRoot();
 const siteLink = (path = '') => `${siteRoot}${path}`;
 const globalNav = [
   ['Start Here', 'START-HERE/'],
-  ['HOME//MAP', 'home-map/'],
   ['The Map', 'downloads/eight-gates-map.html'],
   ['Library', 'LIBRARY/'],
   ['Thesis', 'THESIS/'],
@@ -47,16 +46,6 @@ const globalNav = [
 const nav = document.querySelector('.site-nav');
 if (nav) {
   nav.innerHTML = globalNav.map(([label, path]) => `<a href="${siteLink(path)}">${label}</a>`).join('');
-}
-
-const heroActions = document.querySelector('.hero-actions');
-if (heroActions && !heroActions.querySelector('[data-home-map-link]')) {
-  const homeMapLink = document.createElement('a');
-  homeMapLink.className = 'button button-ghost';
-  homeMapLink.href = siteLink('home-map/');
-  homeMapLink.dataset.homeMapLink = 'true';
-  homeMapLink.textContent = 'Open HOME//MAP';
-  heroActions.appendChild(homeMapLink);
 }
 
 const footerLinks = document.querySelector('.footer-links');
@@ -115,7 +104,7 @@ const gateData = {
   return: {
     number: '08', label: 'Gate VIII · Return', title: 'Build a life, not a collection of systems.',
     description: 'Integrate body, mind, emotion, intuition, relationships, work, place, rhythm, spirit, and practice until the frameworks become tools you can set down.',
-    question: 'How do I live what I have learned?', link: 'THESIS/'
+    question: 'How do I live what I have learned?', link: 'home-map/'
   }
 };
 
