@@ -53,6 +53,16 @@ if (footerLinks) {
   footerLinks.innerHTML = globalNav.map(([label, path]) => `<a href="${siteLink(path)}">${label}</a>`).join('');
 }
 
+const practiceCatalog = document.querySelector('#practice .catalog');
+if (practiceCatalog && !practiceCatalog.querySelector('[data-home-map-card]')) {
+  const homeMapCard = document.createElement('a');
+  homeMapCard.className = 'catalog-card wide reveal';
+  homeMapCard.href = siteLink('home-map/');
+  homeMapCard.dataset.homeMapCard = 'true';
+  homeMapCard.innerHTML = '<span class="resource-type">Gate VIII · Living Practice</span><h3>HOME//MAP</h3><p><em>Your living map of self.</em> A private, local-first practice space for check-ins, life domains, patterns, and journal observations. This is where the curriculum turns back toward your actual life. It is a personal practice layer, not the Eight Gates curriculum map.</p><div class="catalog-meta"><span>Interactive tool</span><span>Locate yourself →</span></div>';
+  practiceCatalog.prepend(homeMapCard);
+}
+
 const menuButton = document.querySelector('.menu-toggle');
 if (menuButton && nav) {
   menuButton.addEventListener('click', () => {
@@ -69,42 +79,42 @@ const gateData = {
   ground: {
     number: '01', label: 'Gate I · Ground', title: 'Before the universe, meet yourself.',
     description: 'Begin with embodiment, breath, nervous-system awareness, emotion, interoception, stillness, and the difference between sensation, thought, interpretation, and belief.',
-    question: 'What is happening inside me?', link: 'LIBRARY/'
+    question: 'What is happening inside me?', link: 'LIBRARY/', cta: 'Explore Ground →'
   },
   know: {
     number: '02', label: 'Gate II · Know', title: 'Meet the inner landscape.',
     description: 'Explore conditioning, identity, intuition, memory, attachment, projection, self-support, self-love, boundaries, and the patterns that shape what feels like self.',
-    question: 'Who am I beneath conditioning?', link: 'downloads/intuitive-system.html'
+    question: 'Who am I beneath conditioning?', link: 'downloads/intuitive-system.html', cta: 'Open The Intuitive System →'
   },
   decode: {
     number: '03', label: 'Gate III · Decode', title: 'Learn the maps without becoming trapped by them.',
     description: 'Study astrology, numerology, Human Design, archetypal systems, planetary functions, and symbolic frameworks as tools for inquiry rather than authorities over your life.',
-    question: 'What maps help me understand myself?', link: 'LIBRARY/nyota-yako.html'
+    question: 'What maps help me understand myself?', link: 'LIBRARY/nyota-yako.html', cta: 'Open NYOTA YAKO →'
   },
   navigate: {
     number: '04', label: 'Gate IV · Navigate', title: 'Learn the rhythms around you.',
     description: 'Work with planetary days, lunar cycles, transits, numerological rhythms, place, seasons, relationship, and timing without confusing symbolism with destiny.',
-    question: 'How do time, place, cycles, and relationships affect me?', link: 'LIBRARY/'
+    question: 'How do time, place, cycles, and relationships affect me?', link: 'LIBRARY/', cta: 'Explore cycles and timing →'
   },
   create: {
     number: '05', label: 'Gate V · Create', title: 'Participate consciously.',
     description: 'Bring attention, intention, behavior, visualization, ritual, action, creativity, surrender, environment, and time into relationship with what you are actually building.',
-    question: 'How do I consciously participate in my life?', link: 'LIBRARY/'
+    question: 'How do I consciously participate in my life?', link: 'LIBRARY/', cta: 'Explore creation →'
   },
   remember: {
     number: '06', label: 'Gate VI · Remember', title: 'Study what came before you.',
     description: 'Explore ancestry, cultural memory, inherited stories, lineage, ritual, dreams, symbolism, and what you choose to carry forward or transform.',
-    question: 'What came before me, and what do I carry forward?', link: 'LIBRARY/'
+    question: 'What came before me, and what do I carry forward?', link: 'LIBRARY/', cta: 'Explore remembrance →'
   },
   expand: {
     number: '07', label: 'Gate VII · Expand', title: 'Enter advanced inquiry without abandoning discernment.',
     description: 'Explore consciousness, nonduality, karma, subtle-body traditions, sacred geometry, mysticism, metaphysics, and quantum language while keeping metaphor, tradition, and physics distinct.',
-    question: 'What might consciousness, spirit, and reality be?', link: 'LIBRARY/'
+    question: 'What might consciousness, spirit, and reality be?', link: 'LIBRARY/', cta: 'Explore advanced inquiry →'
   },
   return: {
     number: '08', label: 'Gate VIII · Return', title: 'Build a life, not a collection of systems.',
     description: 'Integrate body, mind, emotion, intuition, relationships, work, place, rhythm, spirit, and practice until the frameworks become tools you can set down.',
-    question: 'How do I live what I have learned?', link: 'home-map/'
+    question: 'How do I live what I have learned?', link: 'home-map/', cta: 'Open HOME//MAP →'
   }
 };
 
@@ -125,7 +135,10 @@ function selectGate(key) {
   if (selectedTitle) selectedTitle.textContent = gate.title;
   if (selectedDescription) selectedDescription.textContent = gate.description;
   if (selectedQuestion) selectedQuestion.textContent = gate.question;
-  if (selectedLink) selectedLink.href = gate.link;
+  if (selectedLink) {
+    selectedLink.href = gate.link;
+    selectedLink.textContent = gate.cta || 'Explore the Library →';
+  }
 }
 
 gateButtons.forEach((button) => button.addEventListener('click', () => selectGate(button.dataset.gate)));
